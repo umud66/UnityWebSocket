@@ -295,7 +295,7 @@ var WebSocketLibrary =
         if (instance.ws === null) return -3;
         if (instance.ws.readyState !== 1) return -6;
 
-        instance.ws.send(buffer.slice(bufferPtr, bufferPtr + length));
+        instance.ws.send(buffer.slice(bufferPtr, bufferPtr + length).buffer);
 
         return 0;
     },
